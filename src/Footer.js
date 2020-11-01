@@ -5,8 +5,8 @@ export default function Footer() {
     <footer>
       <a
         href="https://github.com/oana33-hub/my-sunny-weather-app"
-        target="blank"
-      >
+        target="blank"  >
+     
         {" "}
         Open-source code
       </a>{" "}
