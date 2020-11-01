@@ -1,20 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
-import Weather from "./Weather";
+import React from "react";
+import Form from "./Form";
+import City from "./City";
+import Date from "./Date";
+import Temperature from "./Temperature";
+import Description from "./Description";
+import Daily from "./Daily";
+import Weekdays from "./Weekdays";
+import Footer from "./Footer";
+import "./footer.css";
+import "./weekdays.css";
+import "./styles.css";
+import "./city.css";
+import "./date.css";
+import "./form.css";
+import "./temperature.css";
+import "./description.css";
+import "./daily.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-        
-         This is my weather app
-        </h1>
-      <Weather city="Paris"/>
-      </header>
+      <div className="container">
+        <div className="weather-app-wrapper">
+          <div className="card-body">
+            <Form />
+            <City />
+            <Date />
+            <Temperature />
+            <Description />
+            <Daily />
+            <Weekdays />
+            <Footer />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
