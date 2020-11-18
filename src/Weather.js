@@ -4,13 +4,14 @@ import "./Weather.css";
 
 
 export default function Weather(props){
-    
-    const[weatherData,setWeatherData]=useState({ ready: false });
+ const[ready,setReady]= useState (false);  
+ const[weatherData,setWeatherData]=useState(null);   
    
 function handleResponse(response){
     console.log(response.data);
+
     setWeatherData({
-    ready: true,    
+       
     temperature: response.data.main.temp,
     humidity: response.data.main.humidity,
     date: "Wednesday 07:00",
@@ -20,12 +21,12 @@ function handleResponse(response){
     city: response.data.name
     
     });
-  
+  setReady(true);
   
    
   
 }
-if(weatherData.ready) {
+if(ready) {
 return( 
     <div className="Weather">
 <form>
@@ -85,9 +86,9 @@ return(
  );
 } else{
    const apiKey= "71d6dfd3b336163612f9cfac0fa5a0ed";
-
+let city="Paris";
 let units ="metric";
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=${units}`;   
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;   
   axios.get(apiUrl).then(handleResponse); 
 return " Loading..";
 }     
