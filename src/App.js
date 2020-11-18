@@ -1,7 +1,7 @@
 import React from "react";
-import Form from "./Form";
-import Temperature from "./Temperature";
 
+import Temperature from "./Temperature";
+import Weather from "./Weather";
 import Daily from "./Daily";
 import Weekdays from "./Weekdays";
 import Footer from "./Footer";
@@ -10,7 +10,7 @@ import "./weekdays.css";
 import "./styles.css";
 
 
-import "./form.css";
+
 import "./temperature.css";
 
 import "./daily.css";
@@ -21,12 +21,15 @@ export default function App() {
       <div className="container">
         <div className="weather-app-wrapper">
           <div className="card-body">
-            <Form />
-            <Temperature />
-           
+            <Weather />
+             <div className = "temperature">
+             <Temperature/>
+           </div>
             <Daily />
             <Weekdays />
             <Footer />
+           
+          
           </div>
         </div>
       </div>
