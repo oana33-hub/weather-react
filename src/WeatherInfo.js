@@ -33,7 +33,7 @@ export default function WeatherInfo(props){
 </div>
 <div className="col-6">
     <ul>
-        <li> Precipitation: {props.data.precipitation} % </li>
+        <li> Max.temperature: {Math.round(props.data.temp_max)} °C </li>
          <li>  Humidity: {props.data.humidity} % </li>
          <li>  Wind: {props.data.wind} km/h  </li>
          

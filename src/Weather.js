@@ -14,7 +14,7 @@ function handleResponse(response){
 
     setWeatherData({
      ready: true, 
-    precipitation: response.data.main.precipitation,  
+    temp_max: response.data.main.temp_max,  
     temperature: response.data.main.temp,
     humidity: response.data.main.humidity,
     date: new Date(response.data.dt * 1000),
