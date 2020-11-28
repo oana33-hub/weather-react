@@ -14,6 +14,9 @@
     font-weight: 100;
     line-height: 29px;
 }
+.Weather h4{
+    color: white;
+}
 .Weather li {
     color:white;
     font-size: 20px;

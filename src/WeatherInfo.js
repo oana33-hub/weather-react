@@ -26,11 +26,11 @@ export default function WeatherInfo(props){
     
 <div className="float-left">
     <WeatherTemperature  celsius={props.data.temperature}/>
-   
-   
+    
  </div>  
 </div>
 </div>
+
 <div className="col-6">
     <ul>
         <li>Feels like:{Math.round(props.data.feels_like)}°C</li>
