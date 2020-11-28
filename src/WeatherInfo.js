@@ -33,11 +33,13 @@ export default function WeatherInfo(props){
 </div>
 <div className="col-6">
     <ul>
+        <li>Feels like:{Math.round(props.data.feels_like)}°C</li>
         <li> Max.temperature: {Math.round(props.data.temp_max)} °C </li>
          <li>  Humidity: {props.data.humidity} % </li>
          <li>  Wind: {props.data.wind} km/h  </li>
          
     </ul>
+    <hr></hr>
 </div>
 </div>
 </div>

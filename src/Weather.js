@@ -14,6 +14,7 @@ function handleResponse(response){
 
     setWeatherData({
      ready: true, 
+    feels_like: response.data.main.feels_like, 
     temp_max: response.data.main.temp_max,  
     temperature: response.data.main.temp,
     humidity: response.data.main.humidity,
